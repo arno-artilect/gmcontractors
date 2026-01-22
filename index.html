@@ -500,33 +500,30 @@
         }
         
         .suppliers-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
-        .suppliers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
+        .suppliers-logo-container {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            justify-items: center;
-            margin-top: 2rem;
+            margin-top: 2.5rem;
+            padding: 1rem;
         }
         
-        .supplier-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            text-align: center;
-            padding: 1rem;
+        .suppliers-logo {
+            width: 70%;
+            max-width: 900px;
+            height: auto;
+            border-radius: var(--card-radius);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             transition: var(--transition);
         }
         
-        .supplier-item:hover {
-            color: var(--text-primary);
+        .suppliers-logo:hover {
             transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
         }
         
         /* Contact Section */
@@ -734,6 +731,10 @@
                 width: 100%;
                 max-width: 300px;
             }
+            
+            .suppliers-logo {
+                width: 90%;
+            }
         }
         
         /* Accessibility */
@@ -762,6 +763,10 @@
             }
             
             .btn:hover {
+                transform: none !important;
+            }
+            
+            .suppliers-logo:hover {
                 transform: none !important;
             }
         }
@@ -875,7 +880,7 @@
     <!-- Header & Navigation -->
     <header id="mainHeader">
         <div class="logo-container">
-            <img src="logo_003_t.png" alt="GM Painting Contractors Logo" class="logo-img">
+            <img src="/assets/img/logo.png" alt="GM Painting Contractors Logo" class="logo-img">
             <div class="logo-text"><span>GM</span> Painting Contractors</div>
         </div>
         
@@ -915,7 +920,7 @@
     <section id="home">
         <div class="video-wrapper">
             <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
-                <source src="hero_video_GM_Contractors.mp4" type="video/mp4">
+                <source src="/assets/video/hero_video_GM_Contractors.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="video-overlay"></div>
@@ -976,7 +981,7 @@
             <article class="service-card">
                 <picture>
                     <source srcset="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=60" alt="Interior painting" class="service-img" loading="lazy">
+                    <img src="/assets/img/interior_painting.jpg" alt="Interior painting" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
                     <h3>Interior Painting</h3>
@@ -987,7 +992,7 @@
             <article class="service-card">
                 <picture>
                     <source srcset="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
-                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=60" alt="Exterior painting" class="service-img" loading="lazy">
+                    <img src="/assets/img/exterior_painting.jpg" alt="Exterior painting" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
                     <h3>Exterior Painting</h3>
@@ -998,7 +1003,7 @@
             <article class="service-card">
                 <picture>
                     <source srcset="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
-                    <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=60" alt="Roof painting" class="service-img" loading="lazy">
+                    <img src="/assets/img/roof_painting_waterproofing.jpg" alt="Roof painting" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
                     <h3>Roof Painting & Waterproofing</h3>
@@ -1009,7 +1014,7 @@
             <article class="service-card">
                 <picture>
                     <source srcset="https://images.unsplash.com/photo-1623282033815-40c8b062d5f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
-                    <img src="https://images.unsplash.com/photo-1623282033815-40c8b062d5f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=60" alt="Tiling work" class="service-img" loading="lazy">
+                    <img src="/assets/img/interior_exterior_woodwork.jpg" alt="Tiling work" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
                     <h3>Interior & Exterior Woodwork</h3>
@@ -1020,7 +1025,7 @@
             <article class="service-card">
                 <picture>
                     <source srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=60" alt="General repairs" class="service-img" loading="lazy">
+                    <img src="/assets/img/specialized_coating.jpg" alt="General repairs" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
                     <h3>Specialized Coating</h3>
@@ -1031,7 +1036,7 @@
             <article class="service-card">
                 <picture>
                     <source srcset="https://images.unsplash.com/photo-1600585154340-046ed5d4c9b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
-                    <img src="https://images.unsplash.com/photo-1600585154340-046ed5d4c9b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=60" alt="Specialized coatings" class="service-img" loading="lazy">
+                    <img src="/assets/img/additional_services.jpg" alt="Specialized coatings" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
                     <h3>Additional Services</h3>
@@ -1083,25 +1088,9 @@
         <div class="suppliers-container">
             <h2 class="section-title">Trusted Suppliers</h2>
             <p style="text-align: center; margin-bottom: 2rem;">We work closely with leading paint manufacturers to ensure quality results</p>
-            <div class="suppliers-grid">
-                <div class="supplier-item">
-                    <h4>Dulux</h4>
-                    <p>let's colour</p>
-                </div>
-                <div class="supplier-item">
-                    <h4>Plascon</h4>
-                </div>
-                <div class="supplier-item">
-                    <h4>MIDAS Earthcote</h4>
-                    <p>CREATORS OF GREAT SOUTH AFRICAN PAINT</p>
-                </div>
-                <div class="supplier-item">
-                    <h4>PROMINENT PAINTS</h4>
-                    <p>APG Brand</p>
-                </div>
-                <div class="supplier-item">
-                    <h4>WeatherPrufe Coatings</h4>
-                </div>
+            
+            <div class="suppliers-logo-container">
+                <img src="/assets/img/suppliers.png" alt="Trusted Supplier Logos including Dulux, Plascon, MIDAS Earthcote, PROMINENT PAINTS, WeatherPrufe Coatings" class="suppliers-logo" loading="lazy">
             </div>
         </div>
     </section>
@@ -1189,7 +1178,7 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <div class="logo-container">
-                    <img src="logo_003_t.png" alt="GM Painting Contractors Logo" class="logo-img">
+                    <img src="logo.png" alt="GM Painting Contractors Logo" class="logo-img">
                     <div class="logo-text"><span>GM</span> Painting Contractors</div>
                 </div>
             </div>
