@@ -10,9 +10,8 @@
     <meta property="og:description" content="Professional painting, waterproofing, tiling & maintenance services in Cape Town.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://www.gmcontractors.co.za">
-    <link rel="preconnect" href="https://images.unsplash.com">
     
-    <!-- Favicon (generic placeholder) -->
+    <!-- Favicon using logo -->
     <link rel="icon" href="./assets/img/logo.png">
     
     <style>
@@ -215,7 +214,7 @@
             color: var(--accent);
         }
         
-        /* Vertical Pagination Dots */
+        /* Vertical Pagination Dots - Updated with new sections */
         .pagination-dots {
             position: fixed;
             right: 2rem;
@@ -490,6 +489,266 @@
             font-size: 1.2rem;
         }
         
+        /* Reviews Section */
+        #reviews {
+            background-color: var(--card-bg);
+            border-radius: var(--card-radius);
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .review-card {
+            background-color: var(--bg-primary);
+            border-radius: var(--card-radius);
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .reviewer-info h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .review-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .stars {
+            color: var(--accent-secondary);
+            font-size: 1.2rem;
+        }
+        
+        .review-text {
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        /* Completed Jobs Section */
+        #completed-jobs {
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .job-card {
+            background-color: var(--card-bg);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .job-image-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .job-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .job-card:hover .job-image {
+            transform: scale(1.05);
+        }
+        
+        .job-content {
+            padding: 1.5rem;
+        }
+        
+        .job-content h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Job Image Modal */
+        .job-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            overflow: hidden;
+        }
+        
+        .job-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+            background-color: var(--card-bg);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 0.5rem;
+        }
+        
+        .modal-close:hover {
+            color: var(--accent);
+            transform: scale(1.1);
+        }
+        
+        .modal-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .main-image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .main-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+        
+        .main-image.zoomed {
+            cursor: zoom-out;
+            transform: scale(1.5);
+        }
+        
+        .image-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            z-index: 10;
+        }
+        
+        .image-nav:hover {
+            background: rgba(239, 68, 68, 0.8);
+        }
+        
+        .nav-prev {
+            left: 20px;
+        }
+        
+        .nav-next {
+            right: 20px;
+        }
+        
+        .thumbnail-container {
+            padding: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+        }
+        
+        .thumbnails {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+        }
+        
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0.6;
+        }
+        
+        .thumbnail:hover,
+        .thumbnail.active {
+            opacity: 1;
+            border: 2px solid var(--accent);
+        }
+        
         /* Suppliers Section */
         #suppliers {
             background-color: var(--bg-primary);
@@ -676,6 +935,14 @@
             .warning-cards {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .jobs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (min-width: 1024px) {
@@ -689,6 +956,14 @@
             
             .warning-cards {
                 grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .reviews-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .jobs-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
             
             /* Enhanced video parallax for desktop */
@@ -735,6 +1010,30 @@
             .suppliers-logo {
                 width: 90%;
             }
+            
+            .modal-content {
+                width: 95%;
+                height: 95vh;
+            }
+            
+            .image-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .nav-prev {
+                left: 10px;
+            }
+            
+            .nav-next {
+                right: 10px;
+            }
+            
+            .thumbnail {
+                width: 60px;
+                height: 45px;
+            }
         }
         
         /* Accessibility */
@@ -758,15 +1057,14 @@
                 background-position: center;
             }
             
-            .service-card:hover {
+            .service-card:hover,
+            .job-card:hover,
+            .review-card:hover,
+            .suppliers-logo:hover {
                 transform: none !important;
             }
             
             .btn:hover {
-                transform: none !important;
-            }
-            
-            .suppliers-logo:hover {
                 transform: none !important;
             }
         }
@@ -889,6 +1187,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#completed-jobs">Our Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -904,15 +1204,20 @@
             <li><a href="#home" class="mobile-link">Home</a></li>
             <li><a href="#about" class="mobile-link">About</a></li>
             <li><a href="#services" class="mobile-link">Services</a></li>
+            <li><a href="#reviews" class="mobile-link">Reviews</a></li>
+            <li><a href="#completed-jobs" class="mobile-link">Our Work</a></li>
             <li><a href="#contact" class="mobile-link">Contact</a></li>
         </ul>
     </div>
     
-    <!-- Vertical Pagination Dots -->
+    <!-- Vertical Pagination Dots - Updated with new sections -->
     <div class="pagination-dots" id="paginationDots">
         <a href="#home" class="dot active" aria-label="Go to Home section"></a>
         <a href="#about" class="dot" aria-label="Go to About section"></a>
         <a href="#services" class="dot" aria-label="Go to Services section"></a>
+        <a href="#reviews" class="dot" aria-label="Go to Reviews section"></a>
+        <a href="#completed-jobs" class="dot" aria-label="Go to Completed Jobs section"></a>
+        <a href="#suppliers" class="dot" aria-label="Go to Suppliers section"></a>
         <a href="#contact" class="dot" aria-label="Go to Contact section"></a>
     </div>
     
@@ -980,7 +1285,7 @@
         <div class="services-grid">
             <article class="service-card">
                 <picture>
-                    <source srcset="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
+                    <source srcset="./assets/img/interior_painting.jpg" media="(min-width: 768px)">
                     <img src="./assets/img/interior_painting.jpg" alt="Interior painting" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
@@ -991,7 +1296,7 @@
             
             <article class="service-card">
                 <picture>
-                    <source srcset="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
+                    <source srcset="./assets/img/exterior_painting.jpg" media="(min-width: 768px)">
                     <img src="./assets/img/exterior_painting.jpg" alt="Exterior painting" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
@@ -1002,7 +1307,7 @@
             
             <article class="service-card">
                 <picture>
-                    <source srcset="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
+                    <source srcset="./assets/img/roof_painting_waterproofing.jpg" media="(min-width: 768px)">
                     <img src="./assets/img/roof_painting_waterproofing.jpg" alt="Roof painting" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
@@ -1013,8 +1318,8 @@
             
             <article class="service-card">
                 <picture>
-                    <source srcset="https://images.unsplash.com/photo-1623282033815-40c8b062d5f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
-                    <img src="./assets/img/interior_exterior_woodwork.jpg" alt="Tiling work" class="service-img" loading="lazy">
+                    <source srcset="./assets/img/interior_exterior_woodwork.jpg" media="(min-width: 768px)">
+                    <img src="./assets/img/interior_exterior_woodwork.jpg" alt="Interior Exterior Woodwork" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
                     <h3>Interior & Exterior Woodwork</h3>
@@ -1024,8 +1329,8 @@
             
             <article class="service-card">
                 <picture>
-                    <source srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
-                    <img src="./assets/img/specialized_coating.jpg" alt="General repairs" class="service-img" loading="lazy">
+                    <source srcset="./assets/img/specialized_coating.jpg" media="(min-width: 768px)">
+                    <img src="./assets/img/specialized_coating.jpg" alt="Specialized coatings" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
                     <h3>Specialized Coating</h3>
@@ -1035,8 +1340,8 @@
             
             <article class="service-card">
                 <picture>
-                    <source srcset="https://images.unsplash.com/photo-1600585154340-046ed5d4c9b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" media="(min-width: 768px)">
-                    <img src="./assets/img/additional_services.jpg" alt="Specialized coatings" class="service-img" loading="lazy">
+                    <source srcset="./assets/img/additional_services.jpg" media="(min-width: 768px)">
+                    <img src="./assets/img/additional_services.jpg" alt="General repairs" class="service-img" loading="lazy">
                 </picture>
                 <div class="service-content">
                     <h3>Additional Services</h3>
@@ -1080,6 +1385,23 @@
                 <h4>BLOTCHING / DISCOLOURATION OF PAINT</h4>
                 <p>This is an indication that the surfaces affected have damp in the brick and plaster work underlying which is having a chemical reaction with the colour pigment which in turn is burning the colour pigment causing the white-ish spots. Ignoring this will eventually become unsightly and affect the aesthetics of the exterior of the building.</p>
             </div>
+        </div>
+    </section>
+    
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="reviews-grid" id="reviewsGrid">
+            <!-- Reviews will be dynamically loaded here from JSON -->
+        </div>
+    </section>
+    
+    <!-- Completed Jobs Section -->
+    <section id="completed-jobs">
+        <h2 class="section-title">Our Completed Projects</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">Browse through some of our recent painting and maintenance projects in Cape Town</p>
+        <div class="jobs-grid" id="jobsGrid">
+            <!-- Jobs will be dynamically loaded here from JSON -->
         </div>
     </section>
     
@@ -1186,6 +1508,26 @@
             <p>&copy; <span id="currentYear">2026</span> GM Painting Contractors Pty (Ltd). All rights reserved.</p>
         </div>
     </footer>
+    
+    <!-- Job Image Modal -->
+    <div class="job-modal" id="jobModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="main-image-container">
+                    <button class="image-nav nav-prev" id="navPrev">❮</button>
+                    <img src="" alt="" class="main-image" id="mainImage">
+                    <button class="image-nav nav-next" id="navNext">❯</button>
+                </div>
+                <div class="thumbnail-container">
+                    <div class="thumbnails" id="thumbnails"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script>
         // Current year for copyright
@@ -1370,7 +1712,346 @@
             return emailRegex.test(email);
         }
         
-        // Lazy loading for images
+        // Function to create star rating HTML
+        function createStarRating(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '★';
+                } else {
+                    stars += '☆';
+                }
+            }
+            return `<div class="stars">${stars}</div>`;
+        }
+        
+        // Job Modal Functionality
+        const jobModal = document.getElementById('jobModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalTitle = document.getElementById('modalTitle');
+        const mainImage = document.getElementById('mainImage');
+        const thumbnails = document.getElementById('thumbnails');
+        const navPrev = document.getElementById('navPrev');
+        const navNext = document.getElementById('navNext');
+        
+        let currentJobImages = [];
+        let currentImageIndex = 0;
+        
+        // Open modal with job images
+        function openJobModal(job) {
+            currentJobImages = job.images || [job.image];
+            currentImageIndex = 0;
+            
+            // Set modal title
+            modalTitle.textContent = job.title;
+            
+            // Clear thumbnails
+            thumbnails.innerHTML = '';
+            
+            // Load first image
+            updateMainImage();
+            
+            // Create thumbnails
+            currentJobImages.forEach((image, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.src = `./assets/img/jobs/${image}`;
+                thumbnail.alt = `Thumbnail ${index + 1}`;
+                thumbnail.className = 'thumbnail';
+                if (index === 0) thumbnail.classList.add('active');
+                
+                thumbnail.addEventListener('click', () => {
+                    currentImageIndex = index;
+                    updateMainImage();
+                    updateThumbnails();
+                });
+                
+                thumbnails.appendChild(thumbnail);
+            });
+            
+            // Show modal
+            jobModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+        
+        // Update main image
+        function updateMainImage() {
+            mainImage.src = `./assets/img/jobs/${currentJobImages[currentImageIndex]}`;
+            mainImage.alt = `Project image ${currentImageIndex + 1}`;
+            mainImage.classList.remove('zoomed');
+            updateThumbnails();
+        }
+        
+        // Update thumbnail active state
+        function updateThumbnails() {
+            document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+                thumb.classList.toggle('active', index === currentImageIndex);
+            });
+        }
+        
+        // Navigate to previous image
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + currentJobImages.length) % currentJobImages.length;
+            updateMainImage();
+        }
+        
+        // Navigate to next image
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % currentJobImages.length;
+            updateMainImage();
+        }
+        
+        // Toggle zoom on main image
+        function toggleZoom() {
+            mainImage.classList.toggle('zoomed');
+        }
+        
+        // Close modal
+        function closeModal() {
+            jobModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+            mainImage.classList.remove('zoomed');
+        }
+        
+        // Event listeners for modal
+        modalClose.addEventListener('click', closeModal);
+        navPrev.addEventListener('click', prevImage);
+        navNext.addEventListener('click', nextImage);
+        mainImage.addEventListener('click', toggleZoom);
+        
+        // Close modal when clicking outside content
+        jobModal.addEventListener('click', (e) => {
+            if (e.target === jobModal) {
+                closeModal();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!jobModal.classList.contains('active')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    closeModal();
+                    break;
+                case 'ArrowLeft':
+                    prevImage();
+                    break;
+                case 'ArrowRight':
+                    nextImage();
+                    break;
+                case ' ':
+                case 'Enter':
+                    e.preventDefault();
+                    toggleZoom();
+                    break;
+            }
+        });
+        
+        // Load Reviews from JSON
+        async function loadReviews() {
+            try {
+                const response = await fetch('./assets/reviews/reviews.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const reviews = await response.json();
+                const reviewsGrid = document.getElementById('reviewsGrid');
+                
+                reviewsGrid.innerHTML = '';
+                
+                reviews.forEach(review => {
+                    const reviewCard = document.createElement('div');
+                    reviewCard.className = 'review-card';
+                    reviewCard.innerHTML = `
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>${review.name}</h4>
+                                <div class="review-date">${review.date}</div>
+                            </div>
+                            ${createStarRating(review.rating)}
+                        </div>
+                        <div class="review-text">"${review.text}"</div>
+                    `;
+                    reviewsGrid.appendChild(reviewCard);
+                });
+                
+                console.log(`Loaded ${reviews.length} reviews`);
+            } catch (error) {
+                console.error('Error loading reviews:', error);
+                // Fallback to default reviews if JSON fails to load
+                const reviewsGrid = document.getElementById('reviewsGrid');
+                reviewsGrid.innerHTML = `
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Sarah Johnson</h4>
+                                <div class="review-date">March 2024</div>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div class="review-text">"GM Painting transformed our home! The exterior was looking tired and worn, but their team did an exceptional job. Professional, clean, and completed on time. Highly recommended!"</div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Michael van der Merwe</h4>
+                                <div class="review-date">February 2024</div>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div class="review-text">"Our roof was leaking and needed urgent attention. Gareth and his team not only fixed the waterproofing but also repainted the entire roof. The quality is outstanding and the roof looks brand new."</div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Cape Town Restaurant</h4>
+                                <div class="review-date">January 2024</div>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div class="review-text">"We hired GM Painting for our restaurant renovation. They worked after hours to minimize disruption to our business. The interior looks fantastic and we've received many compliments from customers."</div>
+                    </div>
+                `;
+            }
+        }
+        
+        // Load Completed Jobs from JSON
+        async function loadJobs() {
+            try {
+                const response = await fetch('./assets/jobs/jobs.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const jobs = await response.json();
+                const jobsGrid = document.getElementById('jobsGrid');
+                
+                jobsGrid.innerHTML = '';
+                
+                jobs.forEach((job, index) => {
+                    // Create the job card HTML
+                    const jobCard = document.createElement('div');
+                    jobCard.className = 'job-card';
+                    jobCard.innerHTML = `
+                        <div class="job-image-container">
+                            <img src="./assets/img/jobs/${job.image}" alt="${job.title} by GM Painting Contractors" class="job-image" loading="lazy">
+                        </div>
+                        <div class="job-content">
+                            <h4>${job.title}</h4>
+                            ${job.description ? `<p>${job.description}</p>` : ''}
+                            ${job.date ? `<p class="job-date">${job.date}</p>` : `<p>Completed ${index + 1} month${index > 0 ? 's' : ''} ago</p>`}
+                            ${job.images && job.images.length > 1 ? `<p><small>${job.images.length} photos - Click image to view gallery</small></p>` : ''}
+                        </div>
+                    `;
+                    
+                    // Add click event to open modal
+                    jobCard.addEventListener('click', () => openJobModal(job));
+                    
+                    jobsGrid.appendChild(jobCard);
+                });
+                
+                console.log(`Loaded ${jobs.length} jobs`);
+                
+                // Add lazy loading to job images
+                const jobImagesElements = document.querySelectorAll('.job-image');
+                
+                if ('IntersectionObserver' in window) {
+                    const imageObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                // Only load if src is different from current src
+                                if (img.dataset.src && img.src !== img.dataset.src) {
+                                    img.src = img.dataset.src;
+                                }
+                                imageObserver.unobserve(img);
+                            }
+                        });
+                    }, {
+                        rootMargin: '50px 0px',
+                        threshold: 0.01
+                    });
+                    
+                    jobImagesElements.forEach(img => {
+                        // Store original src in data-src for lazy loading
+                        if (!img.dataset.src) {
+                            img.dataset.src = img.src;
+                            // Set a placeholder or empty src initially
+                            img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"%3E%3Crect width="400" height="250" fill="%2318181B"/%3E%3Ctext x="50%" y="50%" font-family="Arial" font-size="16" fill="%23E2E8F0" text-anchor="middle" dy=".3em"%3ELoading...%3C/text%3E%3C/svg%3E';
+                        }
+                        imageObserver.observe(img);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading jobs:', error);
+                // Fallback to default jobs if JSON fails to load
+                const jobsGrid = document.getElementById('jobsGrid');
+                jobsGrid.innerHTML = `
+                    <div class="job-card">
+                        <div class="job-image-container">
+                            <img src="./assets/img/jobs/ablution_container_BPS_001.jpg" alt="Ablution container for Beaumont Primary School" class="job-image" loading="lazy">
+                        </div>
+                        <div class="job-content">
+                            <h4>Ablution container for Beaumont Primary School</h4>
+                            <p>Mega job by the staff. School ordered and arranged container and all it's necessary contents. We organized installation and complete cladding as well as deck and covering. You wouldn't know it's a container from the outside. 👏👏👏👏</p>
+                            <p>Completed March 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-image-container">
+                            <img src="./assets/img/jobs/beaumont_primary_school_001.jpg" alt="Beaumont Primary School" class="job-image" loading="lazy">
+                        </div>
+                        <div class="job-content">
+                            <h4>Beaumont Primary School</h4>
+                            <p>Super proud of the team for doing such an amazing job with such a tight timeline for completion. Works finished professionally and on time. Thank you Beaumont Primary School for entrusting us with the work. Paint supplied by Midas Paints Strand Somerset West. #painting #InternalPainting #Paintsmiths #midaspaints</p>
+                            <p>Completed July 2023</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Add click events to fallback jobs
+                document.querySelectorAll('.job-card').forEach((card, index) => {
+                    const job = index === 0 ? {
+                        title: "Ablution container for Beaumont Primary School",
+                        image: "ablution_container_BPS_001.jpg",
+                        description: "Mega job by the staff. School ordered and arranged container and all it's necessary contents. We organized installation and complete cladding as well as deck and covering. You wouldn't know it's a container from the outside. 👏👏👏👏",
+                        date: "Completed March 2024",
+                        images: [
+                            "ablution_container_BPS_001.jpg",
+                            "ablution_container_BPS_002.jpg",
+                            "ablution_container_BPS_003.jpg",
+                            "ablution_container_BPS_004.jpg",
+                            "ablution_container_BPS_005.jpg"
+                        ]
+                    } : {
+                        title: "Beaumont Primary School",
+                        image: "beaumont_primary_school_001.jpg",
+                        description: "Super proud of the team for doing such an amazing job with such a tight timeline for completion. Works finished professionally and on time. Thank you Beaumont Primary School for entrusting us with the work. Paint supplied by Midas Paints Strand Somerset West. #painting #InternalPainting #Paintsmiths #midaspaints",
+                        date: "Completed July 2023",
+                        images: [
+                            "beaumont_primary_school_001.jpg",
+                            "beaumont_primary_school_002.jpg",
+                            "beaumont_primary_school_003.jpg",
+                            "beaumont_primary_school_004.jpg",
+                            "beaumont_primary_school_005.jpg",
+                            "beaumont_primary_school_006.jpg",
+                            "beaumont_primary_school_007.jpg",
+                            "beaumont_primary_school_008.jpg",
+                            "beaumont_primary_school_009.jpg",
+                            "beaumont_primary_school_010.jpg",
+                            "beaumont_primary_school_011.jpg",
+                            "beaumont_primary_school_012.jpg"
+                        ]
+                    };
+                    
+                    card.addEventListener('click', () => openJobModal(job));
+                });
+            }
+        }
+        
+        // Lazy loading for other images
         document.addEventListener('DOMContentLoaded', function() {
             const images = document.querySelectorAll('img[loading="lazy"]');
             
@@ -1399,6 +2080,10 @@
                     imageObserver.observe(img);
                 });
             }
+            
+            // Load reviews and jobs after DOM is ready
+            loadReviews();
+            loadJobs();
         });
         
         // Initial calls
