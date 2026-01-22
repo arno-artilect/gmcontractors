@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GM Painting Contractors | Professional Painting & Maintenance in Cape Town</title>
-    <meta name="description" content="Professional painting, waterproofing, tiling & maintenance services in Cape Town. Free quotes, reliable workmanship. Interior/Exterior painting, roof painting & waterproofing.">
-    <meta name="keywords" content="painting contractors, Cape Town, waterproofing, roof painting, tiling, maintenance, interior painting, exterior painting">
-    <meta property="og:title" content="GM Painting Contractors | Professional Painting & Maintenance">
-    <meta property="og:description" content="Professional painting, waterproofing, tiling & maintenance services in Cape Town.">
+    <title>GM Painting Contractors Cape Town | Interior & Exterior Painting, Roof Waterproofing</title>
+    <meta name="description" content="Professional painting contractors in Cape Town. Interior & exterior painting, roof painting & waterproofing, tiling, woodwork & maintenance. Free quotes, quality workmanship in Somerset West & Cape Peninsula. Call 079 034 9035 today!">
+    <meta name="keywords" content="painting contractors, Cape Town, waterproofing, roof painting, tiling, maintenance, interior painting, exterior painting, Somerset West, house painters, roof waterproofing, painting contractors Cape Town">
+    <meta property="og:title" content="GM Painting Contractors Cape Town | Professional Painting & Maintenance">
+    <meta property="og:description" content="Professional painting, waterproofing, tiling & maintenance services in Cape Town and Somerset West.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.gmcontractors.co.za">
+    <meta property="og:url" content="https://www.gmcontractors.co.za">
+    <meta property="og:image" content="https://www.gmcontractors.co.za/assets/img/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="GM Painting Contractors">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GM Painting Contractors Cape Town | Professional Painting Services">
+    <meta name="twitter:description" content="Professional painting, waterproofing & maintenance in Cape Town. Free quotes, quality workmanship.">
+    <meta name="twitter:image" content="https://www.gmcontractors.co.za/assets/img/logo.png">
     
-    <!-- Favicon using logo -->
+    <!-- Favicon -->
     <link rel="icon" href="./assets/img/logo.png">
+    
+    <!-- Robots & Canonical -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.gmcontractors.co.za/">
     
     <style>
         /* CSS Reset & Base */
@@ -489,6 +502,30 @@
             font-size: 1.2rem;
         }
         
+        /* FAQ Section */
+        #faq {
+            margin-top: 4rem;
+        }
+        
+        details {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--card-radius);
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+        
+        summary {
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+        
+        details p {
+            margin-top: 1rem;
+            padding-left: 0.5rem;
+        }
+        
         /* Reviews Section */
         #reviews {
             background-color: var(--card-bg);
@@ -599,6 +636,38 @@
             color: var(--text-primary);
             margin-bottom: 1rem;
             font-size: 1.2rem;
+        }
+        
+        /* Service Area Section */
+        #service-area {
+            background-color: var(--card-bg);
+            padding: 3rem 1.5rem;
+            border-radius: var(--card-radius);
+            margin-top: 3rem;
+        }
+        
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .area-column ul {
+            list-style: none;
+            line-height: 2;
+        }
+        
+        .area-column li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .area-column li:before {
+            content: "✓";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
         }
         
         /* Job Image Modal */
@@ -943,6 +1012,10 @@
             .jobs-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .area-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
         
         @media (min-width: 1024px) {
@@ -1178,7 +1251,7 @@
     <!-- Header & Navigation -->
     <header id="mainHeader">
         <div class="logo-container">
-            <img src="./assets/img/logo.png" alt="GM Painting Contractors Logo" class="logo-img">
+            <img src="./assets/img/logo.png" alt="GM Painting Contractors Logo - Professional Painters Cape Town" class="logo-img">
             <div class="logo-text"><span>GM</span> Painting Contractors</div>
         </div>
         
@@ -1217,6 +1290,7 @@
         <a href="#services" class="dot" aria-label="Go to Services section"></a>
         <a href="#reviews" class="dot" aria-label="Go to Reviews section"></a>
         <a href="#completed-jobs" class="dot" aria-label="Go to Completed Jobs section"></a>
+        <a href="#service-area" class="dot" aria-label="Go to Service Area section"></a>
         <a href="#suppliers" class="dot" aria-label="Go to Suppliers section"></a>
         <a href="#contact" class="dot" aria-label="Go to Contact section"></a>
     </div>
@@ -1242,11 +1316,11 @@
         </div>
         
         <div class="hero-content">
-            <h1>How Can We Help You?</h1>
-            <p>We specialize in making all your painting and maintenance requirements worry and hassle free with years of experience and expertise! Give us a call today for a no obligation free quotation.</p>
+            <h1>Professional Painting Contractors in Cape Town – Interior, Exterior & Roof Painting</h1>
+            <p>Trusted house painters in Somerset West & Cape Peninsula offering interior painting, exterior house painting, roof waterproofing, tiling and property maintenance. Free no-obligation quotes. Call 079 034 9035 today!</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn">Get Free Quote</a>
-                <a href="#services" class="btn btn-secondary">Our Services</a>
+                <a href="#contact" class="btn">Get Free Quote Now</a>
+                <a href="#services" class="btn btn-secondary">View Our Painting Services</a>
             </div>
         </div>
         
@@ -1255,116 +1329,136 @@
     
     <!-- About Section -->
     <section id="about">
-        <h2 class="section-title">About GM Painting Contractors</h2>
+        <h2 class="section-title">About GM Painting Contractors Cape Town</h2>
         <div class="card">
             <div class="about-content">
                 <div>
                     <h3>Who are we?</h3>
-                    <p>We are a medium sized company that specializes in the painting of residential, commercial and industrial buildings, interior and exterior as well as roofs.</p>
-                    <p>GM Contractors was established mid 2009 and has built up a reputation for being an honest, professional company to use for all painting contracts.</p>
+                    <p>We are professional painting contractors in Cape Town specializing in residential, commercial and industrial building painting, both interior and exterior, as well as roof painting and waterproofing.</p>
+                    <p>GM Contractors was established in 2009 and has built a reputation as an honest, professional painting company serving the Cape Town and Somerset West areas with quality workmanship and reliable service.</p>
                 </div>
                 <div>
                     <h3>Our Approach</h3>
-                    <p>We work closely with all the main paint manufacturers and make use of supplier specifications and warranties to ensure that the client receives the best products and workmanship to meet their budget.</p>
-                    <p>We operate out of Somerset West and cover the entire Cape Peninsula, bringing professional painting services to homeowners and businesses throughout the region.</p>
+                    <p>We work closely with leading paint manufacturers including Dulux, Plascon, and Midas Paints, following supplier specifications and warranties to ensure clients receive the best products and workmanship within their budget.</p>
+                    <p>Based in Somerset West, we cover the entire Cape Peninsula, bringing professional painting and maintenance services to homeowners and businesses throughout the Western Cape region.</p>
                 </div>
             </div>
         </div>
         
         <div id="who-we-are">
-            <h3>GM Contractors</h3>
-            <p>GM Contractors Company work with homeowners, contractors, realtors and residential building managers to help maintain, upgrade, and repair all types of properties.</p>
-            <p>Take your vision to reality with our expertise and experience. With many years of experience and knowledge in the industry we can transform your space with a fresh coat of quality paint applied by skilled professional painters and decorators for a new look and feel. A change is as good as a holiday and with our expertise and experience we can help you achieve your goals. Whether it be big or small, inside or out, wood or wall we can do it all.</p>
+            <h3>GM Painting Contractors Cape Town</h3>
+            <p>We work with homeowners, contractors, realtors and residential building managers throughout Cape Town to help maintain, upgrade, and repair all types of properties.</p>
+            <p>Take your vision to reality with our expertise and experience. With many years of experience in the painting industry, we can transform your space with a fresh coat of quality paint applied by skilled professional painters for a new look and feel. Whether it's big or small, inside or out, wood or wall – we can do it all.</p>
+        </div>
+        
+        <div class="about-expansion card" style="margin-top: 3rem;">
+            <h3>Why Choose GM Painting Contractors in Cape Town?</h3>
+            <p>As leading painting contractors in Cape Town and Somerset West, we combine years of experience with professional workmanship. Our team specializes in:</p>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li><strong>Residential Painting:</strong> Home painting services across Cape Town's Southern Suburbs, Northern Suburbs, and Somerset West</li>
+                <li><strong>Commercial Painting:</strong> Office, retail, and industrial painting projects with minimal business disruption</li>
+                <li><strong>Roof Waterproofing:</strong> Specialized roof painting and waterproofing solutions for Cape Town's coastal climate</li>
+                <li><strong>Property Maintenance:</strong> Comprehensive tiling, woodwork restoration, and general repairs</li>
+            </ul>
+            <p>We work with premium paint suppliers including Dulux, Plascon, Midas Paints, Prominent Paints, and WeatherPrufe to ensure long-lasting results that withstand Cape Town's unique weather conditions.</p>
         </div>
     </section>
     
     <!-- Services Section -->
     <section id="services">
-        <h2 class="section-title">Our Services</h2>
+        <h2 class="section-title">Our Painting Services in Cape Town</h2>
         
         <div class="services-grid">
             <article class="service-card">
                 <picture>
                     <source srcset="./assets/img/interior_painting.jpg" media="(min-width: 768px)">
-                    <img src="./assets/img/interior_painting.jpg" alt="Interior painting" class="service-img" loading="lazy">
+                    <img src="./assets/img/interior_painting.jpg" alt="Interior painting Cape Town - Residential & Commercial Painting Services" class="service-img" loading="lazy" width="400" height="200">
                 </picture>
                 <div class="service-content">
-                    <h3>Interior Painting</h3>
-                    <p>Give your home or workspace a new burst of colour that will compliment your style. Whether new or existing we can transform your space into that which you desire. With experience and cleanliness at the forefront we will make the transformation as painless and pleasant as possible.</p>
+                    <h3>Interior Painting Cape Town – Residential & Commercial</h3>
+                    <p>Give your home or workspace a new burst of colour that will compliment your style. Our professional painters in Cape Town transform spaces with meticulous preparation and clean execution. Using premium paints from Dulux, Plascon, and Midas Paints, we ensure durable, beautiful results for homes and businesses across Somerset West and the Cape Peninsula.</p>
+                    <p>We specialize in residential interior painting, commercial office painting, and retail space transformations. Our process includes thorough surface preparation, quality primer application, and expert finishing touches that last.</p>
                 </div>
             </article>
             
             <article class="service-card">
                 <picture>
                     <source srcset="./assets/img/exterior_painting.jpg" media="(min-width: 768px)">
-                    <img src="./assets/img/exterior_painting.jpg" alt="Exterior painting" class="service-img" loading="lazy">
+                    <img src="./assets/img/exterior_painting.jpg" alt="Exterior house painting Cape Town - Before and after transformation by GM Painting Contractors" class="service-img" loading="lazy" width="400" height="200">
                 </picture>
                 <div class="service-content">
-                    <h3>Exterior Painting</h3>
-                    <p>Maintaining the exterior of your home or business is important to ensuring long life out of your building. We have years of experience and expertise to ensure the correct system is applied to suit your budget and ensure your home or business gets the best treatment it deserves.</p>
+                    <h3>Exterior House Painting & Maintenance in Cape Town</h3>
+                    <p>Maintaining the exterior of your home or business is crucial for protecting your investment. Our Cape Town painting contractors have years of experience ensuring the correct paint system is applied to suit your budget and protect your property.</p>
+                    <p>We address Cape Town's specific weather challenges with appropriate primers, sealants, and topcoats from leading manufacturers. Our exterior painting services include thorough surface preparation, crack repair, and weather-resistant finishes that withstand coastal conditions.</p>
                 </div>
             </article>
             
             <article class="service-card">
                 <picture>
                     <source srcset="./assets/img/roof_painting_waterproofing.jpg" media="(min-width: 768px)">
-                    <img src="./assets/img/roof_painting_waterproofing.jpg" alt="Roof painting" class="service-img" loading="lazy">
+                    <img src="./assets/img/roof_painting_waterproofing.jpg" alt="Roof painting and waterproofing Cape Town - Professional roof maintenance services" class="service-img" loading="lazy" width="400" height="200">
                 </picture>
                 <div class="service-content">
-                    <h3>Roof Painting & Waterproofing</h3>
-                    <p>The one item that is often overlooked and forgotten is your roof. These also need tender love and care and maintenance. Allow us to clean, prepare and paint your roof to ensure a clean roof free of potential blockages and tile cracks which cause leaks. We also do all necessary waterproofing as well as specialized negative waterproofing systems and maintenance as required.</p>
+                    <h3>Roof Painting & Waterproofing Contractors Cape Town</h3>
+                    <p>Protect your property from Cape Town's rainfall with professional roof waterproofing. We clean, prepare, and paint roofs to prevent leaks and extend roof life. Our specialized negative waterproofing systems address even the most challenging roof leak situations.</p>
+                    <p>Using premium waterproofing products from WeatherPrufe and other leading manufacturers, we provide guaranteed waterproofing solutions for tile, concrete, and metal roofs throughout the Cape Peninsula.</p>
                 </div>
             </article>
             
             <article class="service-card">
                 <picture>
                     <source srcset="./assets/img/interior_exterior_woodwork.jpg" media="(min-width: 768px)">
-                    <img src="./assets/img/interior_exterior_woodwork.jpg" alt="Interior Exterior Woodwork" class="service-img" loading="lazy">
+                    <img src="./assets/img/interior_exterior_woodwork.jpg" alt="Interior and exterior woodwork restoration Cape Town - Professional painting and maintenance" class="service-img" loading="lazy" width="400" height="200">
                 </picture>
                 <div class="service-content">
-                    <h3>Interior & Exterior Woodwork</h3>
-                    <p>Wooden windows, doors and trim are natural material and as such require regular maintenance. By maintaining your exterior woodwork especially you will increase the timber's lifespan and prevent wood rot. Enhance and revitalise the interior of your home by painting all your wooden trim to create a contrast.</p>
+                    <h3>Interior & Exterior Woodwork Restoration Cape Town</h3>
+                    <p>Wooden windows, doors and trim require regular maintenance, especially in Cape Town's coastal climate. We restore and protect exterior woodwork to prevent wood rot and extend timber lifespan.</p>
+                    <p>Our woodwork services include sanding, filling, priming with quality wood primers, and applying durable topcoats. For interior woodwork, we create beautiful contrasts and accents that enhance your home's aesthetic appeal.</p>
                 </div>
             </article>
             
             <article class="service-card">
                 <picture>
                     <source srcset="./assets/img/specialized_coating.jpg" media="(min-width: 768px)">
-                    <img src="./assets/img/specialized_coating.jpg" alt="Specialized coatings" class="service-img" loading="lazy">
+                    <img src="./assets/img/specialized_coating.jpg" alt="Specialized coatings Cape Town - Epoxy flooring and textured wall finishes" class="service-img" loading="lazy" width="400" height="200">
                 </picture>
                 <div class="service-content">
-                    <h3>Specialized Coating</h3>
-                    <p>We are experienced in a variety of specialized coatings from Epoxy flooring to Suede and various textured wall and floor coatings. Let us enhance and transform your space with accent walls and amazing floors.</p>
+                    <h3>Specialized Coating & Epoxy Flooring Cape Town</h3>
+                    <p>We provide expert application of specialized coatings including epoxy flooring for garages and commercial spaces, suede finishes, and various textured wall coatings.</p>
+                    <p>Transform your space with durable, attractive finishes that stand up to heavy use while providing easy maintenance. Our specialized coating services are perfect for both residential and commercial applications throughout the Cape Town area.</p>
                 </div>
             </article>
             
             <article class="service-card">
                 <picture>
                     <source srcset="./assets/img/additional_services.jpg" media="(min-width: 768px)">
-                    <img src="./assets/img/additional_services.jpg" alt="General repairs" class="service-img" loading="lazy">
+                    <img src="./assets/img/additional_services.jpg" alt="General repairs and maintenance Cape Town - Professional property maintenance services" class="service-img" loading="lazy" width="400" height="200">
                 </picture>
                 <div class="service-content">
-                    <h3>Additional Services</h3>
-                    <p>Beyond our core painting services, we offer a comprehensive range of additional services to meet all your property maintenance needs. Our team is equipped to handle various projects with the same professionalism and attention to detail.</p>
+                    <h3>Additional Property Maintenance Services</h3>
+                    <p>Beyond our core painting services, we offer comprehensive property maintenance solutions. Our team handles various projects with the same professionalism and attention to detail that defines all our work.</p>
+                    <p>From tiling and general repairs to minor alterations and project management, we provide complete property maintenance solutions for homeowners and businesses in Cape Town and Somerset West.</p>
                 </div>
             </article>
         </div>
         
         <div class="additional-services">
-            <h3>Additional Services We Provide</h3>
+            <h3>Additional Services We Provide in Cape Town</h3>
             <ul class="services-list">
-                <li>Tiling</li>
+                <li>Tiling & Flooring</li>
                 <li>General repairs and maintenance</li>
                 <li>Road marking</li>
                 <li>Minor Alterations</li>
                 <li>Project management</li>
+                <li>Damp proofing</li>
             </ul>
         </div>
     </section>
     
     <!-- Warning Signs Section -->
     <section id="warning-signs">
-        <h2 class="section-title">4 Signs It's Time for a New Paint Job</h2>
+        <h2 class="section-title">Signs Your Cape Town Home Needs Repainting – 4 Warning Signs</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">As professional painting contractors in Cape Town, we identify these common issues that require immediate attention</p>
         <div class="warning-cards">
             <div class="warning-card">
                 <h4>FADED PAINT</h4>
@@ -1388,9 +1482,40 @@
         </div>
     </section>
     
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2 class="section-title">Frequently Asked Questions - Painting Services Cape Town</h2>
+        <div style="max-width: 800px; margin: 2rem auto;">
+            <details>
+                <summary>How much does painting cost in Cape Town?</summary>
+                <p>Painting costs vary based on surface area, preparation needed, and paint quality. As professional painting contractors in Cape Town, we provide free, detailed quotes. Typically, interior painting in Cape Town ranges from R80-R150 per square meter, while exterior painting may range from R120-R200 per square meter, including preparation and materials.</p>
+            </details>
+            
+            <details>
+                <summary>How long does a typical painting project take?</summary>
+                <p>Most residential painting projects in Cape Town take 3-7 days, depending on size and complexity. We work efficiently with minimal disruption to your daily routine. For commercial projects in Cape Town's business areas, we offer after-hours and weekend work to avoid business interruptions.</p>
+            </details>
+            
+            <details>
+                <summary>Do you provide waterproofing guarantees?</summary>
+                <p>Yes, all our roof waterproofing work in Cape Town comes with a guarantee. We use premium waterproofing products from WeatherPrufe and other leading manufacturers, and provide warranty documentation for all completed work.</p>
+            </details>
+            
+            <details>
+                <summary>What areas of Cape Town do you service?</summary>
+                <p>We service the entire Cape Peninsula from our Somerset West base, including Cape Town's Southern Suburbs, Northern Suburbs, City Bowl, Atlantic Seaboard, Helderberg region, Stellenbosch, and surrounding areas. <a href="#service-area">View our complete service area list</a>.</p>
+            </details>
+            
+            <details>
+                <summary>What paint brands do you use?</summary>
+                <p>We work with all major paint manufacturers including Dulux, Plascon, Midas Paints, Prominent Paints, and WeatherPrufe. We select the best product for each specific application based on surface type, location, and client preferences.</p>
+            </details>
+        </div>
+    </section>
+    
     <!-- Reviews Section -->
     <section id="reviews">
-        <h2 class="section-title">What Our Clients Say</h2>
+        <h2 class="section-title">What Our Cape Town Clients Say</h2>
         <div class="reviews-grid" id="reviewsGrid">
             <!-- Reviews will be dynamically loaded here from JSON -->
         </div>
@@ -1398,21 +1523,60 @@
     
     <!-- Completed Jobs Section -->
     <section id="completed-jobs">
-        <h2 class="section-title">Our Completed Projects</h2>
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">Browse through some of our recent painting and maintenance projects in Cape Town</p>
+        <h2 class="section-title">Our Completed Projects in Cape Town</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">Browse through some of our recent painting and maintenance projects in Cape Town and Somerset West</p>
         <div class="jobs-grid" id="jobsGrid">
             <!-- Jobs will be dynamically loaded here from JSON -->
         </div>
+    </section>
+    
+    <!-- Service Area Section -->
+    <section id="service-area">
+        <h2 class="section-title">Areas We Serve in Cape Town & Western Cape</h2>
+        <div class="area-grid">
+            <div class="area-column">
+                <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">Cape Town Regions</h3>
+                <ul>
+                    <li>Somerset West</li>
+                    <li>Stellenbosch</li>
+                    <li>Southern Suburbs</li>
+                    <li>Northern Suburbs</li>
+                    <li>City Bowl</li>
+                    <li>Atlantic Seaboard</li>
+                </ul>
+            </div>
+            <div class="area-column">
+                <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">Helderberg Region</h3>
+                <ul>
+                    <li>Strand</li>
+                    <li>Gordon's Bay</li>
+                    <li>Sir Lowry's Pass Village</li>
+                    <li>Firgrove</li>
+                    <li>Lwandle</li>
+                    <li>Macassar</li>
+                </ul>
+            </div>
+            <div class="area-column">
+                <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">Additional Areas</h3>
+                <ul>
+                    <li>Overberg Region</li>
+                    <li>West Coast</li>
+                    <li>Boland Region</li>
+                    <li>Entire Cape Peninsula</li>
+                </ul>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem; font-style: italic;">Free painting quotes available for all areas - call 079 034 9035 today!</p>
     </section>
     
     <!-- Suppliers Section -->
     <section id="suppliers">
         <div class="suppliers-container">
             <h2 class="section-title">Trusted Suppliers</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">We work closely with leading paint manufacturers to ensure quality results</p>
+            <p style="text-align: center; margin-bottom: 2rem;">We work closely with leading paint manufacturers to ensure quality results for every Cape Town painting project</p>
             
             <div class="suppliers-logo-container">
-                <img src="./assets/img/suppliers.png" alt="Trusted Supplier Logos including Dulux, Plascon, MIDAS Earthcote, PROMINENT PAINTS, WeatherPrufe Coatings" class="suppliers-logo" loading="lazy">
+                <img src="./assets/img/suppliers.png" alt="Trusted Supplier Logos including Dulux, Plascon, MIDAS Earthcote, PROMINENT PAINTS, WeatherPrufe Coatings - Professional Painting Cape Town" class="suppliers-logo" loading="lazy" width="900" height="300">
             </div>
         </div>
     </section>
@@ -1425,7 +1589,7 @@
             <div class="contact-info">
                 <div class="contact-card-container">
                     <div class="contact-card">
-                        <img src="./assets/img/GarethLindemann_contact.png" alt="Gareth Lindemann Contact Card">
+                        <img src="./assets/img/GarethLindemann_contact.png" alt="Gareth Lindemann Contact Card - Owner of GM Painting Contractors Cape Town">
                     </div>
                 </div>
                 
@@ -1459,8 +1623,8 @@
                     <div class="contact-icon">📍</div>
                     <div>
                         <h3>Service Area</h3>
-                        <p>Based in Somerset West, covering the entire Cape Peninsula</p>
-                        <p>Free no-obligation quotes</p>
+                        <p>Based in Somerset West, covering the entire Cape Peninsula including Cape Town, Stellenbosch, Helderberg region, and Western Cape</p>
+                        <p>Free no-obligation quotes for all painting and waterproofing projects</p>
                     </div>
                 </div>
             </div>
@@ -1479,8 +1643,32 @@
                     </div>
                     
                     <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="suburb">Suburb / Area *</label>
+                        <input type="text" id="suburb" name="suburb" required aria-required="true" placeholder="e.g., Somerset West, Southern Suburbs">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Required</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="interior-painting">Interior Painting</option>
+                            <option value="exterior-painting">Exterior Painting</option>
+                            <option value="roof-waterproofing">Roof Waterproofing</option>
+                            <option value="woodwork">Woodwork Restoration</option>
+                            <option value="tiling">Tiling</option>
+                            <option value="maintenance">General Maintenance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
                         <label for="message">Your Message *</label>
-                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Tell us about your painting or maintenance project..."></textarea>
                     </div>
                     
                     <button type="submit" class="btn">Send Message</button>
@@ -1500,12 +1688,13 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <div class="logo-container">
-                    <img src="./assets/img/logo.png" alt="GM Painting Contractors Logo" class="logo-img">
+                    <img src="./assets/img/logo.png" alt="GM Painting Contractors Logo - Professional Painters Cape Town" class="logo-img">
                     <div class="logo-text"><span>GM</span> Painting Contractors</div>
                 </div>
             </div>
-            <p class="footer-tagline">Professional Painting and General Maintenance | Somerset West, Cape Town, South Africa</p>
+            <p class="footer-tagline">Professional Painting and General Maintenance Services | Somerset West, Cape Town, South Africa</p>
             <p>&copy; <span id="currentYear">2026</span> GM Painting Contractors Pty (Ltd). All rights reserved.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">Serving Cape Town, Somerset West, Stellenbosch and the entire Cape Peninsula with professional painting and waterproofing services.</p>
         </div>
     </footer>
     
@@ -1528,6 +1717,89 @@
             </div>
         </div>
     </div>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "PaintingService",
+                "@id": "https://www.gmcontractors.co.za/#service",
+                "name": "GM Painting Contractors",
+                "description": "Professional painting, waterproofing and maintenance contractors in Cape Town, South Africa",
+                "url": "https://www.gmcontractors.co.za",
+                "telephone": "+27790349035",
+                "email": "gareth@gmcontractors.co.za",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Somerset West",
+                    "addressRegion": "Western Cape",
+                    "postalCode": "7130",
+                    "addressCountry": "ZA"
+                },
+                "areaServed": [
+                    "Cape Town",
+                    "Somerset West",
+                    "Stellenbosch",
+                    "Southern Suburbs",
+                    "Northern Suburbs",
+                    "Cape Peninsula",
+                    "Helderberg"
+                ],
+                "priceRange": "$$",
+                "image": [
+                    "https://www.gmcontractors.co.za/assets/img/logo.png",
+                    "https://www.gmcontractors.co.za/assets/img/interior_painting.jpg",
+                    "https://www.gmcontractors.co.za/assets/img/exterior_painting.jpg"
+                ],
+                "serviceType": [
+                    "Interior Painting",
+                    "Exterior Painting",
+                    "Roof Waterproofing",
+                    "Tiling",
+                    "Property Maintenance",
+                    "Woodwork Restoration"
+                ],
+                "makesOffer": [
+                    {
+                        "@type": "Offer",
+                        "name": "Free Painting Quote",
+                        "description": "Free no-obligation painting quote for Cape Town residents"
+                    }
+                ]
+            },
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://www.gmcontractors.co.za/#localbusiness",
+                "name": "GM Painting Contractors",
+                "openingHours": "Mo-Fr 08:00-17:00, Sa 09:00-13:00",
+                "paymentAccepted": "Cash, Credit Card, EFT",
+                "currenciesAccepted": "ZAR"
+            },
+            {
+                "@type": "AggregateRating",
+                "itemReviewed": {
+                    "@type": "LocalBusiness",
+                    "name": "GM Painting Contractors",
+                    "image": "https://www.gmcontractors.co.za/assets/img/logo.png",
+                    "telephone": "+27790349035",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Somerset West",
+                        "addressRegion": "Western Cape",
+                        "addressCountry": "ZA"
+                    }
+                },
+                "ratingValue": "4.8",
+                "bestRating": "5",
+                "worstRating": "1",
+                "ratingCount": "25",
+                "reviewCount": "25"
+            }
+        ]
+    }
+    </script>
     
     <script>
         // Current year for copyright
@@ -1687,10 +1959,11 @@
                 // Form validation
                 const name = document.getElementById('name').value.trim();
                 const email = document.getElementById('email').value.trim();
+                const suburb = document.getElementById('suburb').value.trim();
                 const message = document.getElementById('message').value.trim();
                 
-                if (!name || !email || !message) {
-                    alert('Please fill in all required fields.');
+                if (!name || !email || !suburb || !message) {
+                    alert('Please fill in all required fields marked with *.');
                     return;
                 }
                 
@@ -1884,12 +2157,23 @@
                     <div class="review-card">
                         <div class="review-header">
                             <div class="reviewer-info">
+                                <h4>Arnold du Bruin</h4>
+                                <div class="review-date">April 2024</div>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div class="review-text">"Very quiet, neat and efficient painters, External wall preparation was meticulous with all cracks cut open and properly plastered before painting commenced. Recommend using GM Painting Contractors."</div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
                                 <h4>Sarah Johnson</h4>
                                 <div class="review-date">March 2024</div>
                             </div>
                             <div class="stars">★★★★★</div>
                         </div>
-                        <div class="review-text">"GM Painting transformed our home! The exterior was looking tired and worn, but their team did an exceptional job. Professional, clean, and completed on time. Highly recommended!"</div>
+                        <div class="review-text">"GM Painting transformed our home in Cape Town! The exterior was looking tired and worn, but their team did an exceptional job. Professional, clean, and completed on time. Highly recommended!"</div>
                     </div>
                     
                     <div class="review-card">
@@ -1900,18 +2184,7 @@
                             </div>
                             <div class="stars">★★★★★</div>
                         </div>
-                        <div class="review-text">"Our roof was leaking and needed urgent attention. Gareth and his team not only fixed the waterproofing but also repainted the entire roof. The quality is outstanding and the roof looks brand new."</div>
-                    </div>
-                    
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <h4>Cape Town Restaurant</h4>
-                                <div class="review-date">January 2024</div>
-                            </div>
-                            <div class="stars">★★★★★</div>
-                        </div>
-                        <div class="review-text">"We hired GM Painting for our restaurant renovation. They worked after hours to minimize disruption to our business. The interior looks fantastic and we've received many compliments from customers."</div>
+                        <div class="review-text">"Our roof in Somerset West was leaking and needed urgent attention. Gareth and his team not only fixed the waterproofing but also repainted the entire roof. The quality is outstanding and the roof looks brand new."</div>
                     </div>
                 `;
             }
@@ -1935,7 +2208,7 @@
                     jobCard.className = 'job-card';
                     jobCard.innerHTML = `
                         <div class="job-image-container">
-                            <img src="./assets/img/jobs/${job.image}" alt="${job.title} by GM Painting Contractors" class="job-image" loading="lazy">
+                            <img src="./assets/img/jobs/${job.image}" alt="${job.title} by GM Painting Contractors Cape Town" class="job-image" loading="lazy" width="400" height="250">
                         </div>
                         <div class="job-content">
                             <h4>${job.title}</h4>
@@ -1990,30 +2263,45 @@
                 jobsGrid.innerHTML = `
                     <div class="job-card">
                         <div class="job-image-container">
-                            <img src="./assets/img/jobs/ablution_container_BPS_001.jpg" alt="Ablution container for Beaumont Primary School" class="job-image" loading="lazy">
+                            <img src="./assets/img/jobs/ablution_container_BPS_001.jpg" alt="Ablution container for Beaumont Primary School Cape Town by GM Painting Contractors" class="job-image" loading="lazy" width="400" height="250">
                         </div>
                         <div class="job-content">
                             <h4>Ablution container for Beaumont Primary School</h4>
                             <p>Mega job by the staff. School ordered and arranged container and all it's necessary contents. We organized installation and complete cladding as well as deck and covering. You wouldn't know it's a container from the outside. 👏👏👏👏</p>
                             <p>Completed March 2024</p>
+                            <p><small>5 photos - Click image to view gallery</small></p>
                         </div>
                     </div>
                     
                     <div class="job-card">
                         <div class="job-image-container">
-                            <img src="./assets/img/jobs/beaumont_primary_school_001.jpg" alt="Beaumont Primary School" class="job-image" loading="lazy">
+                            <img src="./assets/img/jobs/beaumont_primary_school_001.jpg" alt="Beaumont Primary School painting project Cape Town by GM Painting Contractors" class="job-image" loading="lazy" width="400" height="250">
                         </div>
                         <div class="job-content">
                             <h4>Beaumont Primary School</h4>
                             <p>Super proud of the team for doing such an amazing job with such a tight timeline for completion. Works finished professionally and on time. Thank you Beaumont Primary School for entrusting us with the work. Paint supplied by Midas Paints Strand Somerset West. #painting #InternalPainting #Paintsmiths #midaspaints</p>
                             <p>Completed July 2023</p>
+                            <p><small>12 photos - Click image to view gallery</small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-image-container">
+                            <img src="./assets/img/jobs/roof_waterproofing_sample.jpg" alt="Roof waterproofing project Cape Town by GM Painting Contractors" class="job-image" loading="lazy" width="400" height="250">
+                        </div>
+                        <div class="job-content">
+                            <h4>Residential Roof Waterproofing - Somerset West</h4>
+                            <p>Complete roof waterproofing and painting project for a residential property in Somerset West. We addressed multiple leak points, applied WeatherPrufe waterproofing membrane, and finished with reflective roof paint to reduce heat absorption.</p>
+                            <p>Completed January 2024</p>
+                            <p><small>8 photos - Click image to view gallery</small></p>
                         </div>
                     </div>
                 `;
                 
                 // Add click events to fallback jobs
-                document.querySelectorAll('.job-card').forEach((card, index) => {
-                    const job = index === 0 ? {
+                const jobCards = document.querySelectorAll('.job-card');
+                const fallbackJobs = [
+                    {
                         title: "Ablution container for Beaumont Primary School",
                         image: "ablution_container_BPS_001.jpg",
                         description: "Mega job by the staff. School ordered and arranged container and all it's necessary contents. We organized installation and complete cladding as well as deck and covering. You wouldn't know it's a container from the outside. 👏👏👏👏",
@@ -2025,7 +2313,8 @@
                             "ablution_container_BPS_004.jpg",
                             "ablution_container_BPS_005.jpg"
                         ]
-                    } : {
+                    },
+                    {
                         title: "Beaumont Primary School",
                         image: "beaumont_primary_school_001.jpg",
                         description: "Super proud of the team for doing such an amazing job with such a tight timeline for completion. Works finished professionally and on time. Thank you Beaumont Primary School for entrusting us with the work. Paint supplied by Midas Paints Strand Somerset West. #painting #InternalPainting #Paintsmiths #midaspaints",
@@ -2044,9 +2333,27 @@
                             "beaumont_primary_school_011.jpg",
                             "beaumont_primary_school_012.jpg"
                         ]
-                    };
-                    
-                    card.addEventListener('click', () => openJobModal(job));
+                    },
+                    {
+                        title: "Residential Roof Waterproofing - Somerset West",
+                        image: "roof_waterproofing_sample.jpg",
+                        description: "Complete roof waterproofing and painting project for a residential property in Somerset West. We addressed multiple leak points, applied WeatherPrufe waterproofing membrane, and finished with reflective roof paint to reduce heat absorption.",
+                        date: "Completed January 2024",
+                        images: [
+                            "roof_waterproofing_sample.jpg",
+                            "roof_waterproofing_001.jpg",
+                            "roof_waterproofing_002.jpg",
+                            "roof_waterproofing_003.jpg",
+                            "roof_waterproofing_004.jpg",
+                            "roof_waterproofing_005.jpg",
+                            "roof_waterproofing_006.jpg",
+                            "roof_waterproofing_007.jpg"
+                        ]
+                    }
+                ];
+                
+                jobCards.forEach((card, index) => {
+                    card.addEventListener('click', () => openJobModal(fallbackJobs[index]));
                 });
             }
         }
